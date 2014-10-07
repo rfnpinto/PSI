@@ -46,7 +46,7 @@ namespace Tarefas.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID_Tarefa,Data,Titulo,Nota,Lido")] Tarefa tarefa)
+        public ActionResult Create([Bind(Include = "Tarefa,Data,Titulo,Nota,Lido")] Tarefa tarefa)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace Tarefas.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID_Tarefa,Data,Titulo,Nota,Lido")] Tarefa tarefa)
+        public ActionResult Edit([Bind(Include = "Tarefa,Data,Titulo,Nota,Lido")] Tarefa tarefa)
         {
             if (ModelState.IsValid)
             {
