@@ -43,6 +43,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -161,12 +163,31 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TarefasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Tarefa.cs">
+      <DependentUpon>Tarefas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tarefas.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tarefas.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tarefas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tarefas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tarefas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tarefas.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -183,6 +204,23 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\Tarefas.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Tarefas.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Tarefas.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Tarefas.edmx</DependentUpon>
+      <LastGenOutput>Tarefas.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Tarefas.edmx.diagram">
+      <DependentUpon>Tarefas.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Tarefas.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Tarefas.edmx</DependentUpon>
+      <LastGenOutput>Tarefas.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -233,8 +271,15 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Tarefas\Create.cshtml" />
+    <Content Include="Views\Tarefas\Delete.cshtml" />
+    <Content Include="Views\Tarefas\Details.cshtml" />
+    <Content Include="Views\Tarefas\Edit.cshtml" />
+    <Content Include="Views\Tarefas\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
