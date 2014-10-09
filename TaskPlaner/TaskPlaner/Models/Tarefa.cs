@@ -19,8 +19,8 @@ namespace TaskPlaner.Models
         public string Titulo { get; set; }
 
         [Required]
-        [StringLength(250, ErrorMessage = "O tamanho maximo da nota é 250 caracteres;")]
-        public int Nota { get; set; }
+        [StringLength(200, ErrorMessage = "O tamanho maximo da nota é 250 caracteres;")]
+        public string Nota { get; set; }
 
         [Required]
         public bool Lido { get; set; } 
