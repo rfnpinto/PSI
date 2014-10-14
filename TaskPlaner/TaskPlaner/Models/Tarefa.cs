@@ -7,7 +7,7 @@ using System.Web;
 
 namespace TaskPlaner.Models
 {
-    public abstract class Tarefa
+    public class Tarefa
     {
         public int ID { get; set; }
 
